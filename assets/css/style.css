@@ -1,0 +1,245 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto:wght@300&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/*  FORMATO PANTALLA MOBILE* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (max-width: 576px) {
+
+    .nav-desktop{
+        display: none;
+    }
+
+    .principal-desktop{
+        display: none;
+    }
+
+    .footer-desktop {
+        display: none;
+    }
+    
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        "grid-navbar"
+        "grid-searching"
+        "grid-principal"
+        "grid-footer";
+        font-family: 'Roboto',  sans-serif;
+        max-width: 350px;
+        margin:auto;
+    }
+    
+    /* MENU DE NAVEGACIÓN **************************************************/
+    .grid-navbar {
+        grid-area: grid-navbar;
+        background-color: #154c79;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        color: white;
+        height: 8vh;
+    }
+    
+    h3 {
+        font-size: 14px;
+        margin: 5px 140px 0px 5px;
+    }
+    
+    /* FILTROS DE BUSQUEDA  ************************************************/
+       
+    select{
+        padding: 7px 10vw;
+        font-size: 16px;
+        border-color: white;
+    }
+    
+    /* SECCION PRINCIPAL  **************************************************/
+    .grid-principal{
+        grid-area: grid-principal;
+        background-color: white;
+        padding: 12px 0px 10px 0px;
+    }
+    
+    /* TARJETA  ************************************************************/
+    .grid-card {
+        border: solid 2px #e8ebe4;
+        margin: 10px 28px 0px 28px;
+    }
+    
+    .grid-card-name {
+        font-size: 13px;
+    }
+            
+    /* PIE DE PAGINA *******************************************************/
+    .grid-footer {
+        grid-area: grid-footer;
+        background: #003d75;
+        color: white;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    
+}
+/*  FIN FORMATO PANTALLA MOBILE* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/*  FORMATO PANTALLA DESKTOP* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+@media (min-width: 576px) {
+
+    .nav-mobile {
+        display: none;
+    }
+
+    .principal-mobile {
+        display: none;
+    }
+
+    .footer-mobile {
+        display: none;
+    }
+
+    .grid-container{
+        display: grid;
+        grid-template-areas:
+        "grid-navbar grid-searching"
+        "grid-footer grid-principal";
+        font-family: 'Roboto',  sans-serif;
+        justify-content: center;
+        width: 2000px;
+    }
+
+    /* MENU DE NAVEGACIÓN **************************************************/
+    .grid-navbar {
+        grid-area: grid-navbar;
+        background-color: #154c79;
+        display: flex;
+        align-items: center;
+        justify-content:flex-start;
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-title {
+        padding: 12px 0px 5px 0px;
+    }
+
+    h3 {
+        font-size: 14px;
+        margin: 5px 0px 0px 5px;
+    }
+
+    p {
+        padding: 8px 0px 0px 0px;
+    }
+
+    /* FILTROS DE BUSQUEDA  ************************************************/
+    select{
+        padding: 0.5% 30vw;
+        font-size: 16px;
+        border-color: white;
+    }
+
+    /* SECCION PRINCIPAL  **************************************************/
+    .dashboard {
+        grid-area: grid-principal;
+        background-color: white;
+        padding: 12px 12px 10px 12px;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 9px;
+        Overflow-y:scroll;
+        grid-auto-rows: auto;
+    }
+
+    /* TARJETA  ************************************************************/
+    .grid-card {
+        border: solid 2px #e8ebe4;
+        margin: 0px;
+        padding: 12px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .card-img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .grid-card-name {
+        font-size: 13px;
+    }
+
+    /* PIE DE PAGINA *******************************************************/
+    .grid-footer {
+        grid-area: grid-footer;
+        background: #003d75;
+        color: white;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        padding: 0px 0px 10px 0px;
+    }
+
+}
+/*  FIN FORMATO PANTALLA DESKTOP* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+/* FILTROS DE BUSQUEDA  ************************************************/
+.grid-searching{
+    grid-area: grid-searching;
+    background-color: #e8ebe4;
+    justify-content: space-around;
+    padding: 5px 20px 10px 20px;
+}
+
+/* TARJETA  ************************************************************/
+.grid-card-btn {
+    padding: 1.2vh 1.2vw;
+    font-size: 12px;
+    color: white;
+    background-color: #003d75;
+    border-color: white;
+    border: 0px;
+    margin: 4px 0px 16px 0px;
+}
+
+/* PAGINADOR  **********************************************************/
+    .paginador {
+        margin: 25px 0px 20px 0px;
+        justify-content: center;
+        color: blue;
+    }
+    
+     .last {
+         border-top-left-radius: 5px;
+         border-bottom-left-radius: 5px;
+     }
+     
+     .next {
+         border-top-right-radius: 5px;
+         border-bottom-right-radius: 5px;
+     }
+    
+     .button {
+        padding: 8px 12px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+     }
+
+ /* PROPIEDADES  ********************************************************/
+    .flex {
+        display: flex;
+    }
+    
+    .flex-central {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
